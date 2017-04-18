@@ -4,6 +4,7 @@ languageCode = "en-us"
 title = "Rich Valley Harvest"
 theme = "hugo-agency-theme"
 publishDir = "docs"
+baseURL = "https://tobyglenn.github.io/richvalleyharvest/"
 # Enter your tracking code to enable Google Analytics
 googleAnalytics = ""
 
