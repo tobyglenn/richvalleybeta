@@ -4,9 +4,9 @@ languageCode = "en-us"
 title = "Rich Valley Harvest"
 theme = "hugo-agency-theme"
 publishDir = "docs"
-baseURL = "https://tobyglenn.github.io/richvalleyharvest/"
+baseURL = "http://www.richvalleyharvest.com/"
 # Enter your tracking code to enable Google Analytics
-googleAnalytics = ""
+googleAnalytics = "UA-97871116-1"
 
 [params]
   # You can use Markdown syntax for urls [text](//url.to/source) or
