@@ -182,9 +182,9 @@ googleAnalytics = "UA-97871116-1"
       # For bio markdown and even multiline strings are available.
       bio = """Stephanie is the heart of the farm and has worked as a Manufacturing and Quality engineer before becoming a full time farmer, her engineering skills are on display anytime you look at the farm, from the mega chicken coop to the chicken tractors have been built and designed by her"""
       social = [
-        ["fa-twitter", "#"],
-        ["fa-facebook", "#"],
-        ["fa-linkedin", "#"]
+        ["fa-instagram", "https://www.instagram.com/richvalleyharvest/"],
+        ["fa-facebook", "https://www.facebook.com/richvalleyharvest/"],
+        ["fa-linkedin", "https://www.linkedin.com/in/stephmpeters/"]
       ]
 
     [[params.team.members]]
