@@ -1,0 +1,5 @@
+<style type='text/css'>
+	header {
+	background-image: url(../img/{{ .Get 0 }});
+	}
+</style>

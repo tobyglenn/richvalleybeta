@@ -1,0 +1,15 @@
+{{ "<!-- Hero -->" | safeHTML }}
+<header>
+  <div class="container">
+    <div class="intro-text">
+      <div class="intro-lead-in">{{ with .Title }}{{ . }}{{ end }}</div>
+      <div class="intro-heading">{{ with .Params.subtitle }}{{ . | markdownify }}{{ end }}</div>
+      {{ with .Params.button }}
+        <a href="#services" class="page-scroll btn btn-xl">{{ . }}</a>
+      {{ end }}
+    </div>
+  </div>
+</header>
+ <div>
+  <video style="display:block; margin: 0 auto;" preload="auto" loop="" playsinline="" poster="/FarmAerial.png" webkit-playsinline=""><source src="/FarmAerial.webm" type="video/webm"><source src="/FarmAerial.mp4" type="video/mp4"></video>
+  </div>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+
+  {{ partial "head.html" . }}
+
+  <body id="page-top" class="index" home=true>
+    {{ partial "nav.html" . }}
+
+    {{ range sort (where .Site.Pages "Section" "index" ) }}
+
+      {{ if and (eq  .RelPermalink (add $.Site.LanguagePrefix "/index/hero/")) (not .Params.disable)}}
+        {{ partial "hero.html" . }}
+      {{ end }}
+
+      {{ if and (eq .RelPermalink (add $.Site.LanguagePrefix "/index/services/")) (not .Params.disable) }}
+        {{ partial "services.html" . }}
+      {{ end }}
+
+      {{ if and (eq .RelPermalink (add $.Site.LanguagePrefix "/index/portfolio/")) (not .Params.disable) }}
+        {{ partial "portfolio.html" . }}
+        {{ partial "modals.html" . }}
+      {{ end }}
+
+      {{ if and (eq .RelPermalink (add $.Site.LanguagePrefix "/index/timeline/")) (not .Params.disable) }}
+        {{ partial "timeline.html" . }}
+      {{ end }}
+
+      {{ if and (eq .RelPermalink (add $.Site.LanguagePrefix "/index/team/")) (not .Params.disable) }}
+        {{ partial "team.html" . }}
+      {{ end }}
+
+      {{ if and (eq .RelPermalink (add $.Site.LanguagePrefix "/index/clients/")) (not .Params.disable) }}
+        {{ partial "clients.html" . }}
+      {{ end }}
+
+      {{ if and (eq .RelPermalink (add $.Site.LanguagePrefix "/index/contact/")) (not .Params.disable) }}
+        {{ partial "contact.html" . }}
+      {{ end }}
+
+    {{ end }}
+
+      {{ if .Site.Params.footer.enable }}
+        {{ partial "footer.html" . }}
+      {{ end }}
+
+    {{ partial "js.html" . }}
+
+  </body>
+</html>

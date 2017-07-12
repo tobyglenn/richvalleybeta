@@ -1,321 +1,85 @@
 # Site settings
-baseurl = "https://example.org/"
+baseurl = "http://www.richvalleyharvest.com/"
 languageCode = "en-us"
 title = "Rich Valley Harvest"
 theme = "hugo-agency-theme"
 publishDir = "docs"
 baseURL = "http://www.richvalleyharvest.com/"
-# Enter your tracking code to enable Google Analytics
+copyright = "Published under the Apache License 2.0."
+
+# Enable Google Analytics by providing your tracking code.
 googleAnalytics = "UA-97871116-1"
 
+# Some general Theme information:
+#
+# Almost all fields are markdown enabled.
+#
+# Icons use Fontawesome's icon font by default. (fortawesome.github.io/Font-Awesome/icons/)
+# The icons are represented by their corresponding CSS class.
+
 [params]
-  # You can use Markdown syntax for urls [text](//url.to/source) or
-  # most longer texts.
-  #
-  # All icons using Fontawesome's icon font. Look at fortawesome.github.io/Font-Awesome/icons/
-  # for more icons. The icons are represented by their corresponding
-  # CSS class.
+  name = "Toby Glenn Peters"
+  description = "Site description"
 
-  # To provide some metadata for search engines feel free to add a few
-  # information about you and your website.
-  name = "Your name"
-  description = "Your description"
-
-  # Link custom assets relative to /static
+  # Optional list of custom assets for css and js.
+  # Asset links are relative to 'static/'.
   custom_css = []
   custom_js  = []
   favicon    = "favicon.ico"
 
-  # Possibility to disable external/additional fonts
+  # Optional disabling of external fonts.
   # Exception: Fontawesome
   disableFonts = false
 
-  # 404 error customization
-  [params.error404]
-    heading = "Page couldn't be found"
-    text = "Please visit [this page](/)"
+  dateFormat = "Jan 2, 2006"
 
-  # Optional piwik tracking
+  # Main menu is by default generated from front-matter settings.
+  [params.navigation]
+    # Optional brand logo used in nav stored in 'static/img/'.
+    #logo = "logo.svg"
+
+  # Pre- and postpended custom links for main menu.
+  # [[languages.en.menu.prepend]]
+  #   url = "http://gohugo.io"
+  #   name = "Hugo"
+  #   weight = 10
+
+  # [[languages.en.menu.postpend]]
+  #   url = "https://github.com/digitalcraftsman/hugo-agency-theme"
+  #   name = "Theme on GitHub"
+  #   weight = 20
+
+  # Footer
+  [params.footer]
+    enable = false
+
+  [[languages.en.menu.social]]
+    weight = 10
+    name = "twitter"
+    pre = "<i class='fa fa-twitter'></i>"
+    url = "#"
+  [[languages.en.menu.social]]
+    weight = 20
+    name = "facebook"
+    pre = "<i class='fa fa-facebook'></i>"
+    url = "#"
+  [[languages.en.menu.social]]
+    weight = 30
+    name = "linkedin"
+    pre = "<i class='fa fa-linkedin'></i>"
+    url = "#"
+
+  # Custom footer menu items not defined within pages.
+  #[[languages.en.menu.footer]]
+  #  weight = 10
+  #  name = "Privacy Policy"
+  #  url = "#"
+
+  # Optional piwik tracking.
   #[params.analytics.piwik]
   #  URL = "https://stats.example.com"
   #  ID = "42"
-  #  # Track all subdomains with "*.example.com"
+  #  # Track all subdomains with "*.example.com".
   #  domain = "www.example.com"
-  #  # Optional integrity check hash
+  #  # Optional hash for integrity check.
   #  hash = "sha512-RfeD0pacGTqy9m7U6PgehQfS4cc7SIt+e+P+H5e848kEvB/RW84CUGO3O4O3LNbxjevym6KPUZ8muPsMrI8WIw=="
-
-  # Navigation
-  [params.navigation]
-    brand = "Rich Valley Harvest"
-    # Optional logo as brand stored in img/
-    #logo = "logo.svg"
-    services = "OurFarm"
-    portfolio = "Projects"
-    about = "About"
-    team = "Farmers"
-    contact = "Contact"
-
-    # Add custom links. Those can be pre- and postpended to the default menu above.
-    # Use the weight attribute to order your custom links. Uncomment the example
-    # below and replace the values with your own.
-
-    # prepended links
-    #[[menu.prepend]]
-    #  url = "http://gohugo.io"
-    #  name = "Hugo"
-    #  weight = 10
-
-    # postpended links
-    #[[menu.postpend]]
-    #  url = "http://gohugo.io"
-    #  name = "External link"
-    #  weight = 10
-
-
-  # Hero section
-  [params.hero]
-    # To change the background image of the hero, replace 'header-bg.jpg' in
-    # the 'static/img' folder.
-    title = "Welcome To Rich Valley Harvest!"
-    subtitle = "It's nice to meet you"
-    buttonText = "Tell me more"
-
-
-  # Services section
-  [params.services]
-    enable = true
-    title = "What We Do"
-    subtitle = "An introduction to the types of things we do on the farm"
-
-    [[params.services.row]]
-
-    [[params.services.row.list]]
-      icon = "fa-youtube-square"
-      title = "Raise Chickens"
-      description = "We have several breeds of chickens all pasture raised, Fertile eggs for sale, and meat birds"
-      url = "#"
-
-    [[params.services.row.list]]
-      icon = "fa-leaf"
-      title = "Grow Vegetables"
-      description = "A wide assortment of vegetables and fruits will be available soon on the farm"
-      url = "#"
-
-    [[params.services.row.list]]
-      icon = "fa-coffee"
-      title = "Brew Kombucha"
-      description = "Not for sale currently but is available for tasting and is a passion for us"
-      url = "#"
-
-  # Portfolio section
-  [params.portfolio]
-    enable = true
-    # All projects defined in their own files. You can find example projects
-    # at 'exampleSite/data/projects'. Copy the 'projects' folder into the 'data' directory
-    # at the root of this Hugo site.
-    # For more informtion take a look at the README.
-    title = "Projects"
-    subtitle = "All the things we build and do"
-
-    [params.portfolio.modal]
-      client = "Source"
-      date = "Date"
-      category = "Category"
-      buttonText = "Close project"
-
-
-    # About section
-  [params.about]
-    enable = true
-    title = "About"
-    subtitle = "We moved from Wilmington back to PA and bought five acres of land"
-    endpoint = "Be part<br>of our<br>story!"
-
-    # The events will be listed from the top to the bottom.
-    # All images are stored under 'static/img/about'.
-    # Replace them with your own.
-    [[params.about.events]]
-      img = "chicks.jpg"
-      date = "2015"
-      title = "Our Humble Beginnings"
-      description = "Stephanie started by clearing brush and we got our first set of chickens"
-
-    [[params.about.events]]
-      img = "flower.jpg"
-      date = "Summer 2016"
-      title = "Starting the orchard/garden"
-      description = "Stephanie built a small wooden fence; we planted a bunch of fruit trees, and planted our first set of grape vines and flowers"
-
-    [[params.about.events]]
-      img = "lettice.jpg"
-      date = "March 2017"
-      title = "Started to farm"
-      description = "Started planting our first set of crops. We started tomatos, peppers, asparagus inside under lights with heat pads."
-
-    [[params.about.events]]
-      img = "flock.jpeg"
-      date = "April 2017"
-      title = "Expanded our flock"
-      description = "We bought 30 new chickens (from knisley and tractor supply), bought 4 turkeys, and 3 ducks"
-
-  # Team section
-  [params.team]
-    enable = true
-    # Possibility to center items
-    #center = true
-    title = "Our amazing team"
-    subtitle = "Family owned and operated"
-    description = "We have been working hard to be more self sufficient and build a better future for our family and yours"
-
-    # All team member's pictures are stored under 'static/img/team'.
-    # Replace them with your own too.
-    # Suggestion: Image size should be at least 360px*360px or the alignment might be affected.
-    [[params.team.members]]
-      img = "stephanie.jpg"
-      name = "Stephanie Peters"
-      position = "Master Engineer, Creative Genius, Owner"
-      scope = [
-        "Penn State Graduate",
-        "BS in Engineering Science, with Honors",
-        "Graduate Coursework (Engineering Science, Nanotechnology)"
-      ]
-      # For bio markdown and even multiline strings are available.
-      bio = """Stephanie is the heart of the farm and has worked as a Manufacturing and Quality engineer before becoming a full time farmer, her engineering skills are on display anytime you look at the farm, from the mega chicken coop to the chicken tractors have been built and designed by her"""
-      social = [
-        ["fa-instagram", "https://www.instagram.com/richvalleyharvest/"],
-        ["fa-facebook", "https://www.facebook.com/richvalleyharvest/"],
-        ["fa-linkedin", "https://www.linkedin.com/in/stephmpeters/"]
-      ]
-
-    [[params.team.members]]
-      img = "toby.jpg"
-      name = "Toby Peters"
-      position = "Farm Hand, Visionary"
-      scope = [
-        "Penn College Graduate",
-        "BS with a Web &amp; Applications Development Concentration"
-      ]
-      bio = """Farm hand who helps out mostly by lifting things around the farm and doing menial repetitive tasks"""
-      social = [
-        ["fa-twitter", "https://twitter.com/TobyGlenn"],
-        ["fa-facebook", "https://www.facebook.com/tobyglenn"],
-        ["fa-linkedin", "https://www.linkedin.com/in/tobyglenn/"]
-      ]
-
-      [[params.team.members]]
-      img = "pepper.jpg"
-      name = "Pepper Peters"
-      position = "Ultimate Helper"
-      scope = [
-        "Fastest and Smartest dog alive",
-        ""
-      ]
-
-  # Client section
-    [params.clients_list]
-      enable = false
-      # Possibility to center items
-      #center = true
-      # Optional client title specifying the involvement
-      #title = "Used and trusted by"
-
-      # All the clients' logos are stored under 'static/img/logos'.
-      # Replace them with your clients's logos.
-      # Suggestion: .svg in the size of 280px*80px looks good
-      [[params.clients]]
-        logo = "envato.jpg"
-        link = "#"
-
-      [[params.clients]]
-        logo = "designmodo.jpg"
-        link = "#"
-
-      [[params.clients]]
-        logo = "themeforest.jpg"
-        link = "#"
-
-      [[params.clients]]
-        logo = "creative-market.jpg"
-        link = "#"
-
-  # Contact section
-  [params.contact]
-    enable = true
-    title = "Contact us"
-    subtitle  = "Let us know what you think of our work or what you would like to see more of:"
-    buttonText = "Send message"
-
-    # Since this template is static, the contact form uses www.formspree.io as a
-    # proxy. The form makes a POST request to their servers to send the actual
-    # email. Visitors can send up to a 1000 emails each month for free.
-    #
-    # What you need to do for the setup?
-    #
-    # - set your email address under 'email' below
-    # - upload the generated site to your server
-    # - send a dummy email yourself to confirm your account
-    # - click the confirm link in the email from www.formspree.io
-    # - you're done. Happy mailing!
-
-    # It is possible to substitute formspring with other providers
-    # as an example the mailout plugin from caddy.
-    # Provide the post URL for the form and depending on the provider
-    # add some custom JS script to finish the implementation.
-    # postURL = "https://example.com/mailout/"
-
-    email = "tobypeters@gmail.com"
-
-    # Success and error message overwrite for async contact form
-    #thanks = "Thank you for awesomely contacting us."
-    #error = "Message could not be send. Please contact us at tobypeters@gmail.com instead."
-
-    # 'warning' defines error messages for invalid inputs
-    [params.contact.form.name]
-      text = "Your Name *"
-      warning = "Please enter your name."
-
-    [params.contact.form.email]
-      text = "Your Email *"
-      warning = "Please enter your email address."
-
-    [params.contact.form.phone]
-      text = "Your Phone *"
-      warning = "Please enter your phone number."
-
-    [params.contact.form.message]
-      text = "Your Message *"
-      warning = "Please enter a message."
-
-      # Add optional form fields to identify contact forms
-      #[[params.contact.form.hidden]]
-      #  name = "someID"
-      #  value = "example.com"
-      #
-      #[[params.contact.form.hidden]]
-      # Special values for name such as "page" and "site" will be autofilled
-      #  name = "page"
-
-  # Footer section
-  [params.footer]
-    enable = false
-    copyright = "Published under the Apache License 2.0."
-
-    [[params.footer.social]]
-      icon = "fa-twitter"
-      link = "#"
-
-    [[params.footer.social]]
-      icon = "fa-facebook"
-      link = "#"
-
-    [[params.footer.social]]
-      icon = "fa-linkedin"
-      link = "#"
-
-    [[params.footer.quicklinks]]
-      text = "Privacy Policy"
-      link = "#"
-
-    [[params.footer.quicklinks]]
-      text = "Terms of Use"
-      link = "#"
