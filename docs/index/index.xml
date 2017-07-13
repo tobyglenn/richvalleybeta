@@ -3,13 +3,13 @@
   <channel>
     
       <title>Indexes on Rich Valley Harvest</title>
-      <link>http://www.richvalleyharvest.com/index/</link>
+      <link>https://tobyglenn.github.io/richvalleybeta/index/</link>
       <description>Recent content in Indexes on Rich Valley Harvest</description>
       <generator>Hugo -- gohugo.io</generator>
       <language>en-us</language>
       <copyright>Published under the Apache License 2.0.</copyright>
       <lastBuildDate>Thu, 16 Mar 2017 00:00:00 +0000</lastBuildDate>
-      <atom:link href="/index/" rel="self" type="application/rss+xml" />
+      <atom:link href="/richvalleybeta/index/" rel="self" type="application/rss+xml" />
     
     
   </channel>

@@ -3,12 +3,12 @@
   <channel>
     
       <title>Tags on Rich Valley Harvest</title>
-      <link>http://www.richvalleyharvest.com/tags/</link>
+      <link>https://tobyglenn.github.io/richvalleybeta/tags/</link>
       <description>Recent content in Tags on Rich Valley Harvest</description>
       <generator>Hugo -- gohugo.io</generator>
       <language>en-us</language>
       <copyright>Published under the Apache License 2.0.</copyright>
-      <atom:link href="/tags/" rel="self" type="application/rss+xml" />
+      <atom:link href="/richvalleybeta/tags/" rel="self" type="application/rss+xml" />
     
     
   </channel>
