@@ -3,12 +3,12 @@
   <channel>
     
       <title>Categories on Rich Valley Harvest</title>
-      <link>https://tobyglenn.github.io/richvalleybeta/categories/</link>
+      <link>http://beta.richvalleyharvest.com/categories/</link>
       <description>Recent content in Categories on Rich Valley Harvest</description>
       <generator>Hugo -- gohugo.io</generator>
       <language>en-us</language>
       <copyright>Published under the Apache License 2.0.</copyright>
-      <atom:link href="/richvalleybeta/categories/" rel="self" type="application/rss+xml" />
+      <atom:link href="/categories/" rel="self" type="application/rss+xml" />
     
     
   </channel>
